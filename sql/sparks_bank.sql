@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2020 at 10:01 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- Generation Time: Jul 10, 2021 at 10:23 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,6 +35,15 @@ CREATE TABLE `transaction` (
   `datetime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `transaction`
+--
+
+INSERT INTO `transaction` (`sno`, `sender`, `receiver`, `balance`, `datetime`) VALUES
+(1, 'salunkhesakshi', 'Nick', 1, '2021-07-10 23:47:30'),
+(2, 'anushka', 'sakshi', 1000, '2021-07-11 01:23:47'),
+(3, 'new', 'sakshi', 5000, '2021-07-11 01:29:05');
+
 -- --------------------------------------------------------
 
 --
@@ -53,16 +62,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `balance`) VALUES
-(1, 'Salman', 'khan@gmail.com', 50000),
-(2, 'Kiara', 'advani@gmail.com', 30000),
-(3, 'Shahrukh', 'shah@gmail.com', 40000),
-(4, 'Priyanka', 'chopra@gmail.com', 50000),
-(5, 'Shahid', 'kapoor@gmail.com', 40000),
-(6, 'Ranbir', 'singh@gmail.com', 30000),
-(7, 'Deepika', 'padukone@gmail.com', 50000),
-(8, 'Juhi', 'chawla@gmail.com', 40000),
-(9, 'Nick', 'jonas@gmail.com', 30000),
-(10, 'Taapsee', 'pannu@gmail.com', 50000);
+(12, 'sakshi', 'salunkhesakshi1@gmail.com', 16000),
+(13, 'sayali', 'sayali@gmail.com', 20000),
+(14, 'anushka', 'anu@gmail.com', 24000),
+(15, 'vaishnavi', 'vaishnavi@gmail.com', 25000),
+(16, 'ravindra', 'ravi@gmail.com', 50000),
+(17, 'sangita', 'sangita@gmail.com', 50000),
+(18, 'atharva', 'atharva@gmail.com', 30000),
+(19, 'new', 'new@gmail.com', 15000);
 
 --
 -- Indexes for dumped tables
@@ -88,13 +95,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `sno` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `sno` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
